@@ -26,7 +26,7 @@
           "minItems": 1,
           "uniqueItems" : true
         },
-        
+
         "complex_type": {
           "type": "string",
           "enum": [
@@ -40,7 +40,7 @@
           ],
           "description": "Type of target"
         },
-        
+
         "target_type": {
           "type": "string",
           "enum": [
