@@ -1,0 +1,60 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "description": "Common evidence definition structure to validate all its variants",
+    "type": "object",
+    "version": "2.0.0",
+    "required": [ "target", "disease", "source_id", "type_id", "metadata", "evidence" ],
+    "additionalProperties": false,
+
+    "patternProperties": {
+        "^(/[^/]+)+$": { "$ref": "http://some.site.somewhere/entry-schema#" }
+    },
+    "properties": {
+        "target": {"$ref": "#/definitions/target"},
+        "disease": {"$ref": "#/definitions/disease"},
+        "metadata": {"$ref": "#/definitions/metadata"},
+        "evidence": {"$ref": "#/definitions/evidence"},
+        "private": {"$ref": "#/definitions/private"},
+        "datasource": {"enum": ["europepmc",
+                                "chembl",
+                                "expression_atlas",
+                                "phenodigm",
+                                "slapenrich",
+                                "gwas_catalog",
+                                "eva",
+                                "cancer_gene_census",
+                                "phewas_catalog",
+                                "uniprot",
+                                "genomics_england",
+                                "reactome",
+                                "eva_somatic",
+                                "uniprot_literature",
+                                "intogen",
+                                "gene2phenotype",
+                                "uniprot_somatic"
+                               ]},
+        "type": {"enum": ["genetic_association",
+                             "rna_expression",
+                             "genetic_literature",
+                             "affected_pathway",
+                             "somatic_mutation",
+                             "known_drug",
+                             "literature_mining",
+                             "literature",
+                             "animal_model"
+                            ]},
+        "id": {"type": "string"}
+    },
+    "definitions": {
+        "target": {
+            "type": "object",
+            "required": ["id"],
+            "properties": {
+                "id": {"type": "string"}
+            }
+        },
+        "disease": {},
+        "metadata": {},
+        "evidence": {}
+    }
+}
