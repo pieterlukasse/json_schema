@@ -4,7 +4,7 @@
   "description": "Details about mutation",
   "type": "object",
   "version": "1.2.8",
-  "id": "https://raw.githubusercontent.com/opentargets/json_schema/master/src/evidence/mutation/mutation.json",
+  "id": "https://raw.githubusercontent.com/opentargets/json_schema/ep-fixrelative/src/evidence/mutation/mutation.json",
   "properties": {
     "role_in_cancer": {
       "description": "The role in cancer can be TSG, oncogene or gene_fusion",

@@ -6,7 +6,7 @@
   "version": "1.2.8",
   "allOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/opentargets/json_schema/master/src/bioentity/base.json"
+      "$ref": "https://raw.githubusercontent.com/opentargets/json_schema/ep-fixrelative/src/bioentity/base.json"
     },
     {
       "properties": {
@@ -23,7 +23,7 @@
         },
         "max_phase_for_all_diseases": {
           "type": "object",
-          "$ref": "https://raw.githubusercontent.com/opentargets/json_schema/master/src/evidence/drug/diseasephase.json"
+          "$ref": "https://raw.githubusercontent.com/opentargets/json_schema/ep-fixrelative/src/evidence/drug/diseasephase.json"
         },
         "withdrawn_country": {
           "type": ["string","null"]
